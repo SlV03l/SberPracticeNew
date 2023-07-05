@@ -54,9 +54,28 @@ public class Matrix {
     public void printMatrix () {
         for (int rowIndex = 0; rowIndex < rowsCol; rowIndex++) {
             for (int colIndex = 0; colIndex < columnsCol; colIndex++) {
-                System.out.print(twoDimArray[rowIndex][colIndex]);
+                System.out.print(twoDimArray[rowIndex][colIndex] + " ");
             }
             System.out.println();
         }
+    }
+
+    public Matrix multiplyMatrix (Matrix matrix2) {
+        if (this.columnsCol != matrix2.rowsCol) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+
+        Matrix result = new Matrix(this.rowsCol, matrix2.columnsCol);
+        for (int rowIndex = 0; rowIndex < this.rowsCol; rowIndex++) {
+            for (int colIndex = 0; colIndex < matrix2.columnsCol; colIndex++) {
+                double product = 0;
+                for (int elementIndex = 0; elementIndex < this.columnsCol; elementIndex++) {
+                    product += this.twoDimArray[rowIndex][elementIndex] * matrix2.twoDimArray[elementIndex][colIndex];
+                }
+                result.setValue(rowIndex, colIndex, product);
+            }
+        }
+
+        return result;
     }
 }
