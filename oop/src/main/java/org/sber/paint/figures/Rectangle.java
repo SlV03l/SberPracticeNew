@@ -4,8 +4,8 @@ import org.sber.paint.Color;
 import org.sber.paint.Point;
 
 public class Rectangle extends Figure {
-    private double width;
-    private double height;
+    private final double width;
+    private final double height;
 
     public Rectangle(Point point, double width, double height) {
         super(point);

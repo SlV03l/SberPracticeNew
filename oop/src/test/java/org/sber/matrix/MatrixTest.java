@@ -2,54 +2,52 @@ package org.sber.matrix;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class MatrixTest {
-    private static final Matrix matrix1;
+    private static final Matrix MATRIX_ONE;
 
     static {
-        matrix1 = new Matrix(3, 3);
-        matrix1.printMatrix();
+        MATRIX_ONE = new Matrix(3, 3);
+        MATRIX_ONE.printMatrix();
         System.out.println();
     }
 
-    static final Matrix matrix2;
+    static final Matrix MATRIX_TWO;
 
     static {
-        matrix2 = new Matrix(3, 3);
-        matrix2.printMatrix();
+        MATRIX_TWO = new Matrix(3, 3);
+        MATRIX_TWO.printMatrix();
         System.out.println();
     }
 
     @Test
     void setValue() {
-        matrix1.setValue(2,2,2.3);
-        matrix1.printMatrix();
+        MATRIX_ONE.setValue(2,2,2.3);
+        MATRIX_ONE.printMatrix();
         System.out.println();
     }
 
     @Test
     void sumTwoMatrix() {
-        Matrix result = matrix1.sumTwoMatrix(matrix2);
+        Matrix result = MATRIX_ONE.sumTwoMatrix(MATRIX_TWO);
         result.printMatrix();
         System.out.println();
     }
 
     @Test
     void multiplyNumber() {
-        Matrix result = matrix1.multiplyNumber(2.0);
+        Matrix result = MATRIX_ONE.multiplyNumber(2.0);
         result.printMatrix();
         System.out.println();
     }
 
     @Test
     void printMatrix() {
-        matrix1.printMatrix();
+        MATRIX_ONE.printMatrix();
     }
 
     @Test
     void multiplyMatrix() {
-        Matrix result = matrix1.multiplyMatrix(matrix2);
+        Matrix result = MATRIX_ONE.multiplyMatrix(MATRIX_TWO);
         result.printMatrix();
     }
 }

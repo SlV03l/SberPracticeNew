@@ -2,11 +2,9 @@ package org.sber.book;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class BookTest {
 
-    private static final Book book = new Book(
+    private static final Book BOOK = new Book(
             "IT",
             new Author("Stephen King", "Male", "Stephen@king.com"),
             1986
@@ -14,27 +12,27 @@ class BookTest {
 
     @Test
     void getTitle() {
-        System.out.println(book.getTitle());
+        System.out.println(BOOK.getTitle());
     }
 
     @Test
     void getAuthor() {
-        System.out.println(book.getAuthor().toString());
+        System.out.println(BOOK.getAuthor().toString());
     }
 
     @Test
     void setYear() {
-        book.setYear(2017);
-        System.out.println(book.getYear());
+        BOOK.setYear(2017);
+        System.out.println(BOOK.getYear());
     }
 
     @Test
     void getYear() {
-        System.out.println(book.getYear());
+        System.out.println(BOOK.getYear());
     }
 
     @Test
     void testToString() {
-        System.out.println(book.toString());
+        System.out.println(BOOK.toString());
     }
 }

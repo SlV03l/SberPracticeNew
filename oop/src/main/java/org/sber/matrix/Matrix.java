@@ -2,7 +2,7 @@ package org.sber.matrix;
 
 public class Matrix {
 
-    private double[][] twoDimArray;
+    private final double[][] twoDimArray;
     private final int rowsCol;
     private final int columnsCol;
 

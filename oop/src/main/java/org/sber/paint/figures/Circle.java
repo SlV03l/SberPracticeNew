@@ -4,7 +4,7 @@ import org.sber.paint.Color;
 import org.sber.paint.Point;
 
 public class Circle extends Figure{
-    private double radius;
+    private final double radius;
 
     public Circle(Point point, double radius) {
         super(point);

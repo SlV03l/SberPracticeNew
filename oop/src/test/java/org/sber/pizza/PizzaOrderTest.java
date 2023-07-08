@@ -2,11 +2,9 @@ package org.sber.pizza;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class PizzaOrderTest {
 
-    private static final PizzaOrder pizza = new PizzaOrder(
+    private static final PizzaOrder PIZZA = new PizzaOrder(
             "пепперони",
             PizzaOrder.Size.SMALL,
             false,
@@ -14,16 +12,16 @@ class PizzaOrderTest {
 
     @Test
     void order() {
-        pizza.order();
+        PIZZA.order();
     }
 
     @Test
     void cancel() {
-        pizza.cancel();
+        PIZZA.cancel();
     }
 
     @Test
     void testToString() {
-        System.out.println(pizza.toString());
+        System.out.println(PIZZA.toString());
     }
 }

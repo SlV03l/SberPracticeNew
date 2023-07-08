@@ -4,9 +4,9 @@ import org.sber.paint.Color;
 import org.sber.paint.Point;
 
 public class Triangle extends Figure{
-    private double side1;
-    private double side2;
-    private double side3;
+    private final double side1;
+    private final double side2;
+    private final double side3;
 
     public Triangle(Point point, double side1, double side2, double side3) {
         super(point);

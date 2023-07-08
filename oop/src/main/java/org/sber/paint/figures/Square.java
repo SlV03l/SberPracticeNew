@@ -4,7 +4,7 @@ import org.sber.paint.Color;
 import org.sber.paint.Point;
 
 public class Square extends Figure{
-    private int side;
+    private final int side;
 
     public Square(Point point, int side) {
         super(point);

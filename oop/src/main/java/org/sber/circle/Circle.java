@@ -1,8 +1,8 @@
 package org.sber.circle;
 
 public class Circle {
-    private double radius;
-    private String color;
+    private final double radius;
+    private final String color;
 
     public Circle(double radius, String color) {
         this.radius = radius;
