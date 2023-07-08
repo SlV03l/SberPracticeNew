@@ -3,14 +3,14 @@ package org.sber;
 import org.sber.exceptions.*;
 
 public class BankOnline {
-    private static final String[] blockedCards = {
+    private static final String[] BLOCKED_CARDS = {
             "1111111111111111",
             "2222222222222222",
             "3333333333333333"
     };
 
     private boolean isCardBlocked(String cardNumber) {
-        for (String blockedCard : blockedCards) {
+        for (String blockedCard : BLOCKED_CARDS) {
             if (blockedCard.equals(cardNumber)) {
                 return true;
             }
