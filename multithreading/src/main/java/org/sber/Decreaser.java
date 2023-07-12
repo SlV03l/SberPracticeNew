@@ -9,10 +9,12 @@ public class Decreaser implements Runnable {
 
     @Override
     public void run() {
-        try {
-            resourceProcessor2.decrease();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+        for (int i = 0; i < 10; i++) {
+            try {
+                resourceProcessor2.decrease();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }

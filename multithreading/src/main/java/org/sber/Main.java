@@ -19,9 +19,7 @@ public class Main {
         Resource resource = new Resource();
         ResourceProcessor2 resourceProcessor2 = new ResourceProcessor2(resource);
 
-        for (int i = 0; i < 10; i++) {
-            new Thread(new Decreaser(resourceProcessor2)).start();
-            new Increaser2(resourceProcessor2).start();
-        }
+        new Thread(new Decreaser(resourceProcessor2)).start();
+        new Increaser2(resourceProcessor2).start();
     }
 }
